@@ -1,0 +1,18 @@
+{
+  "name": "ai-notebook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "网页版 AI 笔记本，支持分类与智能视图",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "cd frontend && npm run build && cd ../backend && node build-public.js",
+    "start": "cd backend && node index.js"
+  },
+  "keywords": ["notebook", "react", "express"],
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
